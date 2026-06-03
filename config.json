@@ -1,0 +1,9 @@
+{
+    "mode": "mask",
+
+    "log_files":[
+        "/var/log/auth.log",
+         "/var/log/syslog"
+    ]
+
+}
