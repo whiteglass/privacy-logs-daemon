@@ -1,7 +1,7 @@
 import re
 
 #patterns that are used to detect email and password
-email_regex = r"\b[A-Za-z0-9._%+_]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"
+email_regex = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"
 password_regex = r"(?i)\b(password|pwd|passwd|secret|passphrase|pass)\b\s*[:=]\s*(\".*?\"|\S+)"
 
 def detection(data):
