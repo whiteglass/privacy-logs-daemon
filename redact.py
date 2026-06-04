@@ -11,3 +11,14 @@ def hash_value(value):
 
 def redact(value):
     return "[REDACTED]"
+
+def apply_redact(value,mode):
+    if mode == "mask":
+        return mask(value)
+    elif mode == "hash":
+        return hash_value(value)
+    elif mode == "redact":
+        return redact(value)
+    else
+        print(f"[ERROR]: '{mode}' is not recognised, defaulting to hash.")
+        return hash_value(value)
