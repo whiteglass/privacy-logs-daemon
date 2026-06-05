@@ -19,6 +19,6 @@ def apply_redact(value,mode):
         return hash_value(value)
     elif mode == "redact":
         return redact(value)
-    else
+    else:
         print(f"[ERROR]: '{mode}' is not recognised, defaulting to hash.")
         return hash_value(value)
