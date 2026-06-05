@@ -3,7 +3,7 @@ import time
 import os
 from detect import detection_sensitive
 from config import load_config
-
+from redact import apply_redact
 
 def tailing_file(path, config):
     if not os.path.exists(path):
@@ -17,9 +17,22 @@ def tailing_file(path, config):
         while True:
             line = file.readline()
             if line:
-                print(line.strip(), config)
+                process_line(line.strip(), config)
             else:
                 time.sleep(1)
+
+def process_line(line, config):
+    matches = detection_sensitive(line)
+    if not matches:
+        return
+
+    redacted_data = line
+    for label, value in matches:
+        cleanse = apply_redact(value, config["mode"])
+        redacted_data = redacted_data.replace(value, cleanse)
+
+    print(f"[DETECTED]: found {[label for label, value in matches]}")
+
 
 def run():
     config = load_config()
