@@ -1,0 +1,12 @@
+[Unit]
+Description=Privacy Logs Daemon — sensitive data redaction
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/YOUR_USERNAME/privacy-logs-daemon/run.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
