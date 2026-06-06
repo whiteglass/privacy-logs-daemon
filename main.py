@@ -17,11 +17,14 @@ def tailing_file(path, config):
         while True:
             line = file.readline()
             if line:
-                process_line(line.strip(), config)
+                process_line(line.strip(), path, config)
             else:
                 time.sleep(1)
 
-def process_line(line, config):
+def process_line(line, path, config):
+    if "[HASH:" in line or "[REDACTED]" in line or "***" in line:
+        return
+
     matches = detection_sensitive(line)
     if not matches:
         return
@@ -30,6 +33,14 @@ def process_line(line, config):
     for label, value in matches:
         cleanse = apply_redact(value, config["mode"])
         redacted_data = redacted_data.replace(value, cleanse)
+
+    with open(path, "r") as file:
+        contents = file.read()
+
+    contents = contents.replace(line, redacted_data)
+
+    with open(path, "w") as file:
+        file.write(contents)
 
     print(f"[DETECTED]: found {[label for label, value in matches]}")
 
