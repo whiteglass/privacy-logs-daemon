@@ -34,7 +34,7 @@ I currently have not implemented an easier method to change patterns, but future
 
 ## What are the redaction modes?
 
-There are three modes available which are configused inside of 'config.json'.
+There are three modes available which are configured inside of 'config.json'.
 
 | Mode | Input | Output |
 |------|-------|--------|
