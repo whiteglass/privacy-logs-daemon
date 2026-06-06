@@ -47,6 +47,9 @@ def process_line(line, path, config):
 
 def run():
     config = load_config()
+    if config is None:
+        return
+    
     print(f"[daemon] starting with: {config['mode']}")
     for log_file in config["log_files"]:
         tailing_file(log_file, config)

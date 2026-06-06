@@ -6,9 +6,14 @@ import os
 config_path = os.path.join(os.path.dirname(__file__), "config.json")
 
 def load_config ():
+
     with open(config_path, "r") as file:
         config = json.load(file)
     
+    if "/path/to/your/logfile.log" in config["log_files"]:
+         print("[ERROR]: please update log_files in config.json before running")
+         return None
+
     redaction_modes = ["mask", "hash", "redact"]
     if config["mode"] not in redaction_modes:
         print(f"[ERROR]: invalid mode '{config['mode']}' returning to default mask mode")
