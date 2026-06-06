@@ -131,6 +131,103 @@ sudo systemctl stop privacy-logs-daemon
 ```bash
 sudo systemctl disable privacy-logs-daemon
 ```
+## Examples and Screenshots
+
+### Script running in terminal:
+
+###  Mask
+
+<table>
+<tr>
+<th>Before</th>
+<th>After</th>
+</tr>
+<tr>
+<td valign="top">
+
+<img width="429" alt="image" src="https://github.com/user-attachments/assets/8174315b-0710-483c-9784-7f71c7371750" />
+
+<br><br>
+
+<img width="460" alt="image" src="https://github.com/user-attachments/assets/3620f1fe-6d75-466d-a83b-395110b73eb5" />
+
+</td>
+<td valign="top">
+
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/ec7e63fb-6115-4bfb-8d35-87d549165a80" />
+
+<br><br>
+
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/014a23ae-af47-4981-ab06-43c6966683b6" />
+
+</td>
+</tr>
+</table>
+
+---
+
+###  Hash
+
+<table>
+<tr>
+<th>Before</th>
+<th>After</th>
+</tr>
+<tr>
+<td valign="top">
+
+<img width="415" alt="image" src="https://github.com/user-attachments/assets/255b1b2f-5dcd-4ec3-a697-a3b06283ceb6" />
+
+<br><br>
+
+<img width="460" alt="image" src="https://github.com/user-attachments/assets/60ded4a6-9b55-4cc5-864a-7a38520d8b10" />
+
+</td>
+<td valign="top">
+
+<img width="421" alt="image" src="https://github.com/user-attachments/assets/024328ca-9419-4104-9f3a-e413a68c154a" />
+
+<br><br>
+
+<img width="632" alt="image" src="https://github.com/user-attachments/assets/19f802fa-c210-4e69-ac14-17ec4db8c94a" />
+
+</td>
+</tr>
+</table>
+
+
+
+---
+
+###  Redact
+
+<table>
+<tr>
+<th>Before</th>
+<th>After</th>
+</tr>
+<tr>
+<td valign="top">
+
+<img width="421" alt="image" src="https://github.com/user-attachments/assets/583cd211-404f-45d9-9bfe-e6ac1e6424b4" />
+
+<br><br>
+
+<img width="460" alt="image" src="https://github.com/user-attachments/assets/77405021-d612-4683-80c2-58f5913ebf20" />
+
+</td>
+<td valign="top">
+
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/e477632c-fbc4-4ff6-b071-392b6f357f94" />
+
+<br><br>
+
+<img width="408" alt="image" src="https://github.com/user-attachments/assets/ef77c616-739a-48b3-b71d-f866853b9f6a" />
+
+</td>
+</tr>
+</table>
+
 
 ---
 
