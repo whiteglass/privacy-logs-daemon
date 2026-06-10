@@ -55,7 +55,7 @@ Default mode that is set in 'config.json' is the hash mode.
 ## Installation
 
 ```bash
-git clone https://github.com/glass-skyy/privacy-logs-daemon.git
+git clone https://github.com/whiteglass/privacy-logs-daemon.git
 cd privacy-logs-daemon
 ```
 
